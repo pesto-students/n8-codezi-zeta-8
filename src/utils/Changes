@@ -1,0 +1,29 @@
+- Header sign up to avtar + account text link  - Done
+- Confirm password on signup - Done
+- Email validating - Done
+- Last Name Should be options - Done
+- Password strong Validation - Done
+- Footer should stay in bottom on all pages (Issue) - Done
+- Instead of test use assessments word - Done
+- Big Plus sign to add assessment - Done
+- assessment level Easy, Medium, Hard - Done
+- assessment keep only description - Done
+- Replace avtar in header - Done
+- Check correct answer - Done
+- Answer description on question level - Done
+
+
+- Start test page, Title, Role, Timer, Start test button should go to 
+- Test detail page
+- Ck editor Output
+- Header fix for page
+
+
+- Pagination assessments
+- Company dashboard
+
+- Duration Change Title (Mins) - Done
+- Add level in list - Done
+- prettier  Eslint +
+- yarn run eslint --init
+- May be we can remove
