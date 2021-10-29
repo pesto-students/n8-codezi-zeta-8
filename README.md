@@ -3,7 +3,7 @@
 </p>
 
 ## Table of contents
-- [Introduction](#intro)
+- [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Features](#features)
