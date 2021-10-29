@@ -21,9 +21,9 @@ import TestDetail from './router/TestDetail'
 import Test from './router/Test'
 import NotFoundPage from 'components/NotFoundPage'
 import { useAuth } from 'authentication'
-
 import StartTestOld from './router/StartTest/old'
 
+/* eslint-disable react/jsx-no-duplicate-props */
 const RestrictedRoute = ({
    component: Component,
    location,
@@ -95,7 +95,7 @@ function App() {
                path={`${match.url}`}
                authUser={authUser}
                location={location}
-               path="/start-test/:id"
+               path="/start/:id"
                component={StartTest}
             />
             <RestrictedRoute

@@ -7,6 +7,7 @@
  *
  */
 
+/* eslint-disable default-case, no-param-reassign */
 import produce from 'immer'
 import {
    LOAD_ASSESSMENT_SUCCESS,

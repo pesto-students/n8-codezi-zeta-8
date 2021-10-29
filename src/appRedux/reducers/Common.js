@@ -17,6 +17,7 @@ export const initialState = {
    pathname: '/',
 }
 
+/* eslint-disable default-case, no-param-reassign */
 const CommonReducer = (state = initialState, action) =>
    produce(state, (draft) => {
       switch (action.type) {

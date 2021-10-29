@@ -2,21 +2,21 @@
  * Combine all reducers in this file and export the combined reducers.
  */
 
-import { combineReducers } from 'redux';
-import { connectRouter } from 'connected-react-router';
+import { combineReducers } from 'redux'
+import { connectRouter } from 'connected-react-router'
 
-import history from '../utils/history';
-import global from './global';
+import history from '../utils/history'
+import global from './global'
 
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
  */
 export default function createReducer(injectedReducers = {}) {
-  const rootReducer = combineReducers({
-    global,
-    router: connectRouter(history),
-    ...injectedReducers,
-  });
+   const rootReducer = combineReducers({
+      global,
+      router: connectRouter(history),
+      ...injectedReducers,
+   })
 
-  return rootReducer;
+   return rootReducer
 }

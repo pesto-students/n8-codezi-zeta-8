@@ -1,3 +1,4 @@
+/* eslint-disable */
 import logo from '../../logo.svg'
 import user from '../../user1.png'
 import { Navbar, Container, Nav, Dropdown } from 'react-bootstrap'

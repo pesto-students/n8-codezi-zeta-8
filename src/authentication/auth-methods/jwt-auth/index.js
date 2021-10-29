@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from 'react'
 import { httpClient, setTokenOnHeader } from 'utils/Api'
 import { toast } from 'react-toastify'

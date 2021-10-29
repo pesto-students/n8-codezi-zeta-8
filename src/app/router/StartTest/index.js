@@ -1,10 +1,11 @@
+/* eslint-disable */
 import { useEffect, useState } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import { Schedule } from '@material-ui/icons'
 import { httpClient } from 'utils/Api'
 import LoadingIndicator from 'components/LoadingIndicator'
 
-export default function Thankyou({ match }) {
+export default function StartTest({ match }) {
    const { id } = match.params
 
    const [loading, setLoading] = useState(true)
@@ -30,7 +31,7 @@ export default function Thankyou({ match }) {
             <>
                <Row className="q-col-gutter-md mb-3">
                   <Col className="col-12 d-flex justify-content-end">
-                     <Button className="px-3">Start a Test</Button>
+                     <Button className="px-3">Start Assignment</Button>
                   </Col>
                </Row>
                <Row className="bg-light mb-3">

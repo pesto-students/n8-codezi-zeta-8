@@ -1,10 +1,18 @@
 import React from 'react'
 
-import Circle from './Circle'
-import Wrapper from './Wrapper'
+// import Circle from './Circle'
+// import Wrapper from './Wrapper'
 
 const LoadingIndicator = () => (
-   <Wrapper>
+   <img
+      style={{ position: 'absolute', width: '120px', left: 'calc(50% - 60px)' }}
+      src="/loader.gif"
+      alt="loader"
+   />
+)
+
+// {
+/* <Wrapper>
       <Circle />
       <Circle rotate={30} delay={-1.1} />
       <Circle rotate={60} delay={-1} />
@@ -17,7 +25,7 @@ const LoadingIndicator = () => (
       <Circle rotate={270} delay={-0.3} />
       <Circle rotate={300} delay={-0.2} />
       <Circle rotate={330} delay={-0.1} />
-   </Wrapper>
-)
+   </Wrapper> */
+// }
 
 export default LoadingIndicator

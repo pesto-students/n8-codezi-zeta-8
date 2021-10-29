@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState, useEffect } from 'react'
 import {
    makeStyles,
@@ -150,6 +151,13 @@ export default function AddUpdateQuestions({
          activeQuestion.choices.forEach((choice, index) => {
             setValue(`choice${index + 1}`, choice)
          })
+      } else {
+         setValue('question', '')
+         setValue('score', '')
+         setValue('choice1', '')
+         setValue('choice2', '')
+         setValue('choice3', '')
+         setValue('choice4', '')
       }
    }, [activeQuestion])
 
@@ -162,7 +170,9 @@ export default function AddUpdateQuestions({
       >
          <form onSubmit={handleSubmit(onSubmit)}>
             <DialogTitle>
-               Create Question
+               {activeQuestion && activeQuestion.objectId
+                  ? 'Update Question'
+                  : 'Create Question'}
                <IconButton
                   aria-label="close"
                   onClick={handleClose}
@@ -247,7 +257,7 @@ export default function AddUpdateQuestions({
                            name="groupOptions"
                            aria-label="Radio button for following text input"
                            value="0"
-                           checked={answer === 0}
+                           checked={answer == 0}
                            onChange={(evt) => setAnswer(evt.target.value)}
                         />
 
@@ -271,7 +281,7 @@ export default function AddUpdateQuestions({
                            name="groupOptions"
                            aria-label="Radio button for following text input"
                            value="1"
-                           checked={answer === 1}
+                           checked={answer == 1}
                            onChange={(evt) => setAnswer(evt.target.value)}
                         />
                         <FormControl
@@ -294,7 +304,7 @@ export default function AddUpdateQuestions({
                            name="groupOptions"
                            aria-label="Radio button for following text input"
                            value="2"
-                           checked={answer === 2}
+                           checked={answer == 2}
                            onChange={(evt) => setAnswer(evt.target.value)}
                         />
                         <FormControl
@@ -317,7 +327,7 @@ export default function AddUpdateQuestions({
                            name="groupOptions"
                            aria-label="Radio button for following text input"
                            value="3"
-                           checked={answer === 3}
+                           checked={answer == 3}
                            onChange={(evt) => setAnswer(evt.target.value)}
                         />
                         <FormControl

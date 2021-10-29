@@ -76,7 +76,10 @@ export default function AddTest({
       >
          <form onSubmit={handleSubmit(onSubmit)}>
             <DialogTitle>
-               Create Assessment
+               {assessment && assessment.objectId
+                  ? 'Update Assessment'
+                  : ' Create Assessment'}
+
                <IconButton
                   onClick={handleCloseAssessmentDialog}
                   aria-label="close"

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, memo } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import LoadingIndicator from 'components/LoadingIndicator'
@@ -57,7 +58,7 @@ export function CandidateHome({
                      md={4}
                      className="mb-3"
                   >
-                     <Link to={`/start-test/${assessment.objectId}`}>
+                     <Link to={`/start/${assessment.objectId}`}>
                         <div className="dashbard-card">
                            <div className="dashbard-card-title">
                               {assessment.title}
@@ -65,7 +66,7 @@ export function CandidateHome({
                            <div className="dashbard-card-desc">
                               {assessment.role}
                            </div>
-                           <Button>Start Test</Button>
+                           <Button>Start Assignment</Button>
                         </div>
                      </Link>
                   </Col>

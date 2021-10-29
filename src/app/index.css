@@ -633,3 +633,7 @@ button.btn.btn-outlined:active {
    color: red;
    font-size: 13px;
 }
+
+td {
+   vertical-align: middle;
+}

@@ -17,8 +17,18 @@ export function* getAssessments(action) {
          userId: action.userId,
       })
 
-      if (response.data && response.data.result)
+      if (response.data && response.data.result) {
+         response.data.result.sort(function (a, b) {
+            var keyA = new Date(a.createdAt),
+               keyB = new Date(b.createdAt)
+            // Compare the 2 dates
+            if (keyA < keyB) return 1
+            if (keyA > keyB) return -1
+            return 0
+         })
+
          yield put(assessmentsLoaded(response.data.result))
+      }
 
       return response
    } catch (err) {

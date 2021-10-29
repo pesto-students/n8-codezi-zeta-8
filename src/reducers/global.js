@@ -7,20 +7,20 @@
  *
  */
 
-import produce from 'immer';
+import produce from 'immer'
 // import { LOAD_REPOS_SUCCESS, LOAD_REPOS, LOAD_REPOS_ERROR } from './constants';
 
 // The initial state of the App
 export const initialState = {
-  loading: false,
-  error: false,
-};
+   loading: false,
+   error: false,
+}
 
 /* eslint-disable default-case, no-param-reassign */
 const appReducer = (state = initialState, action) =>
-  produce(state, (draft) => {
-    switch (action.type) {
-    }
-  });
+   produce(state, (draft) => {
+      switch (action.type) {
+      }
+   })
 
-export default appReducer;
+export default appReducer

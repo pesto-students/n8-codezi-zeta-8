@@ -1,8 +1,17 @@
+/* eslint-disable */
 import React, { useEffect, memo } from 'react'
 import { Helmet } from 'react-helmet'
 
 import { Button, Container, Table, Col, Row } from 'react-bootstrap'
-import { List, Schedule, Person, Add, Search } from '@material-ui/icons'
+import {
+   // List,
+   HelpOutline,
+   Schedule,
+   Person,
+   Add,
+   Search,
+   ShowChart,
+} from '@material-ui/icons'
 
 import { Link } from 'react-router-dom'
 
@@ -98,10 +107,10 @@ export function CreateTest({
             <Table responsive striped hover className="shadow table-theme">
                <thead>
                   <tr>
-                     <th className="pl-0">Assessment name</th>
-                     <th className="text-center">Not Attempted</th>
+                     <th className="pl-0">Details</th>
+                     <th className="text-center">Attempted</th>
                      <th className="text-center">Completed</th>
-                     <th className="text-center">To Evaluate</th>
+                     {/* <th className="text-center">To Evaluate</th> */}
                   </tr>
                </thead>
                <tbody>
@@ -126,7 +135,8 @@ export function CreateTest({
                            </div>
                            <ul className="test-list-info">
                               <li>
-                                 <List />0
+                                 <HelpOutline />
+                                 {assessment.questionCounts || 0}
                               </li>
                               <li>
                                  <Schedule />
@@ -138,12 +148,15 @@ export function CreateTest({
                                     authUser.lastName || ''
                                  }`}
                               </li>
-                              <li>{assessment.level}</li>
+                              <li>
+                                 <ShowChart />
+                                 {assessment.level}
+                              </li>
                            </ul>
                         </td>
                         <td className="text-center">0</td>
                         <td className="text-center">0</td>
-                        <td className="text-center">0</td>
+                        {/* <td className="text-center">0</td> */}
                      </tr>
                   ))}
                </tbody>

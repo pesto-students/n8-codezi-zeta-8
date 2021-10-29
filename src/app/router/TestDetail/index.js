@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from 'react'
 import { Button, Container, Table, Col, Row, Dropdown } from 'react-bootstrap'
 import { Edit, MoreVert, Add, Search } from '@material-ui/icons'
@@ -32,7 +33,17 @@ export default function CreateTest({ match }) {
                      assessmentId: id,
                   })
                   .then(({ data }) => {
-                     if (data && data.result) setQuestions(data.result)
+                     if (data && data.result) {
+                        data.result.sort(function (a, b) {
+                           var keyA = new Date(a.createdAt),
+                              keyB = new Date(b.createdAt)
+                           // Compare the 2 dates
+                           if (keyA < keyB) return 1
+                           if (keyA > keyB) return -1
+                           return 0
+                        })
+                        setQuestions(data.result)
+                     }
                   })
                   .finally(() => {
                      setLoadingQuestions(false)
@@ -64,12 +75,24 @@ export default function CreateTest({ match }) {
    }
 
    const afterSubmit = () => {
+      setActiveQuestion(null)
+
       httpClient
          .post('functions/getQuestionsByAssessment', {
             assessmentId: id,
          })
          .then(({ data }) => {
-            if (data && data.result) setQuestions(data.result)
+            if (data && data.result) {
+               data.result.sort(function (a, b) {
+                  var keyA = new Date(a.createdAt),
+                     keyB = new Date(b.createdAt)
+                  // Compare the 2 dates
+                  if (keyA < keyB) return 1
+                  if (keyA > keyB) return -1
+                  return 0
+               })
+               setQuestions(data.result)
+            }
          })
          .finally(() => {})
    }
@@ -81,8 +104,7 @@ export default function CreateTest({ match }) {
    }
 
    const toggleDialog = (val) => {
-      if (!val) setActiveQuestion(null)
-
+      setActiveQuestion(null)
       setOpenQuestionDialog(val)
    }
    return (
@@ -141,7 +163,7 @@ export default function CreateTest({ match }) {
                   </Col>
                )}
 
-               {!loadingQuestions && questions.length && (
+               {!loadingQuestions && questions.length > 0 && (
                   <Table
                      responsive
                      striped

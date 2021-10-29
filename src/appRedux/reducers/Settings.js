@@ -9,6 +9,7 @@ export const initialState = {
    initURL: '',
 }
 
+/* eslint-disable default-case, no-param-reassign */
 const SettingsReducer = (state = initialState, action) =>
    produce(state, (draft) => {
       switch (action.type) {
