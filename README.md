@@ -18,7 +18,7 @@
 - [Contributors](#contributors)
 - [Setup](#Setup)
 
-## About 🎯 
+## 🎯 About 
 
 Codezi is a unique Screen Applicants platform for Free.
 
@@ -26,13 +26,13 @@ Codezi is a unique Screen Applicants platform for Free.
 
 Frontend is hosted on Netlify.
 
-## Demo ▶️ 
+## ▶️ Demo 
 
 Here you can find the demo links:
 
 - [Codezi](https://wizardly-brahmagupta-842dc6.netlify.app/)
 
-### Test credentials 👮‍♂️ 
+### 👮‍ Test credentials 
 
 > Email: admin@codezi.com<br/>
 > Password: Admin@123<br/>
@@ -46,7 +46,18 @@ Here you can find the demo links:
 ![Parse Platform and Cloud Functions](https://img.shields.io/badge/Parse--Platform--and--Cloud--Functions-0081AA?style=for-the-badge&logo=Formik&logoColor=white)\
 ![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## Setup ⬇️
+## 😄 Screenshots 
+
+## 🧔 Contributors
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+     <td align="center"><a href="https://github.com/rmemon"><img src="https://avatars.githubusercontent.com/u/13727755?v=4" width="80px;" alt="Rahil Memon"/><br /><sub><b>Rahil Memon</b></sub></a><br /><a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Code">💻</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Documentation">📖</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Tests">⚠️</a></td>
+  </tr>  
+</table>
+
+## ⬇️ Setup 
 
 Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
 
