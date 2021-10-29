@@ -1,6 +1,6 @@
 import { Container, Row, Form, Col } from 'react-bootstrap'
 import { CheckCircle, Cancel } from '@material-ui/icons'
-import thankyou from 'thankyou.png'
+// import thankyou from 'thankyou.png'
 
 export default function Thankyou() {
    return (
@@ -43,7 +43,8 @@ export default function Thankyou() {
             <Col className="col-auto text-right d-flex align-items-center"></Col>
             <Col className="col-12 mt-3">
                <ul className="ans-option-list radio-no-select">
-                  <li class="wrong-ans">
+                  {/* class="wrong-ans" */}
+                  <li>
                      <Form.Check
                         id="rdo-btn"
                         type="radio"
