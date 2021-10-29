@@ -16,6 +16,7 @@
 - [Technologies](#Technologies)
 - [Screenshots](#screenshots)
 - [Contributors](#contributors)
+- [Setup](#Setup)
 
 ## About 🎯 
 
@@ -45,7 +46,7 @@ Here you can find the demo links:
 ![Parse Platform and Cloud Functions](https://img.shields.io/badge/Parse--Platform--and--Cloud--Functions-0081AA?style=for-the-badge&logo=Formik&logoColor=white)\
 ![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## ⬇️ Setup
+## Setup
 
 Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
 
