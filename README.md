@@ -7,12 +7,12 @@
 
 ## 🏢 Table of contents
 - [About](#-about)
-- [Demo](#Demo)
-- [Technologies](#Technologies)
-- [Screenshots](#screenshots)
-- [Contributors](#contributors)
-- [Setup](#Setup)
-- [Mentor](#Mentor)
+- [Demo](#%EF%B8%8F-demo)
+- [Technologies](#-technologies)
+- [Screenshots](#-screenshots)
+- [Contributors](#-contributors)
+- [Mentor](#-mentor)
+- [Setup](#%EF%B8%8F-setup)
 
 ## 🎯 About 
 
@@ -58,6 +58,9 @@ Here you can find the demo links:
   </tr>  
 </table>
 
+
+## 👨‍🏫 Mentor
+
 ## ⬇️ Setup 
 
 Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
@@ -70,5 +73,3 @@ $ cd codezi
 $ yarm
 $ yarn start
 ```
-
-## 👨‍🏫 Mentor
