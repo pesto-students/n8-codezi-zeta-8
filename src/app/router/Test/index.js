@@ -21,6 +21,7 @@ export default function Test({ match }) {
    const [selChoice, setSelChoice] = useState(null)
    const [answers, setAnswers] = useState({})
    const [isDone, setIsDone] = useState(false)
+   const [timerStarted, setTimerStarted] = useState(false)
 
    useEffect(() => {
       setLoading(true)
@@ -128,8 +129,9 @@ export default function Test({ match }) {
             Math.round((expectedEnd.getTime() - new Date().getTime()) / 1000),
          )
 
-         // 60000
          setTimer(diff)
+
+         if (!timerStarted) setTimerStarted(true)
       }, 1000)
    }
    const previous = () => {
@@ -195,6 +197,7 @@ export default function Test({ match }) {
                status: 1,
                userAnswers: localQuestions,
                score,
+               assessment,
             })
             .finally(() => {
                setIsDone(true)
@@ -252,8 +255,12 @@ export default function Test({ match }) {
                   </Col>
                   <Col className="col-auto ">
                      <div className="question-timer">
-                        <Schedule />
-                        <div> {toHHMMSS(timer)}</div>
+                        {timerStarted && (
+                           <>
+                              <Schedule />
+                              <div> {toHHMMSS(timer)}</div>
+                           </>
+                        )}
                      </div>
                   </Col>
                </Row>
