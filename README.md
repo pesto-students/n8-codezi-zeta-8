@@ -6,7 +6,7 @@
 
 
 ## 🏢 Table of contents
-- [About](#About)
+- [About](#-about)
 - [Demo](#Demo)
 - [Technologies](#Technologies)
 - [Screenshots](#screenshots)
