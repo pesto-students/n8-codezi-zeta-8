@@ -4,11 +4,6 @@
         <h4 align="center">Applicants website for all your hiring.</h4><br/>
 </p>
 
-<!-- ![Image of Codezi](./home.png) -->
-<p align="center">
-<img src="./home.png" align="center" height="300">
-</p>
-
 
 ## 🏢 Table of contents
 - [About](#About)
@@ -17,6 +12,7 @@
 - [Screenshots](#screenshots)
 - [Contributors](#contributors)
 - [Setup](#Setup)
+- [Mentor](#Mentor)
 
 ## 🎯 About 
 
@@ -47,8 +43,13 @@ Here you can find the demo links:
 ![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## 😄 Screenshots 
+<!-- ![Image of Codezi](./home.png) -->
+<p>
+<img src="./home.png" align="center" height="200">
+</p>
 
-## 🧔 Contributors
+
+## 👱 Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 <table>
@@ -69,3 +70,5 @@ $ cd codezi
 $ yarm
 $ yarn start
 ```
+
+## 👨‍🏫 Mentor
