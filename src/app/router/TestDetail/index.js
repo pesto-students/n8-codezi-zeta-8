@@ -115,7 +115,7 @@ export default function CreateTest({ match }) {
             <>
                <AddTest
                   open={opeenAssessment}
-                  handleCloseAssessmentDialog={setOpeenAssessment}
+                  handleCloseAssessmentDialog={() => setOpeenAssessment(false)}
                   authUser={authUser}
                   assessment={assessment}
                   handleAddUpdateAssessment={handleAddUpdateAssessment}
@@ -137,7 +137,7 @@ export default function CreateTest({ match }) {
                   >
                      {assessment.title}
                      <Button
-                        onClick={setOpeenAssessment}
+                        onClick={() => setOpeenAssessment(true)}
                         variant="outline-primary"
                         className="btn-outline-primary rounded-circle square-btn mx-3"
                      >

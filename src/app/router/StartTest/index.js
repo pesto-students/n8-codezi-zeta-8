@@ -1,16 +1,48 @@
 /* eslint-disable */
 import { useEffect, useState } from 'react'
-import { Button, Container, Row, Col } from 'react-bootstrap'
+import { Button, Container, Row, Col, Spinner } from 'react-bootstrap'
 import { Schedule } from '@material-ui/icons'
 import { httpClient } from 'utils/Api'
 import LoadingIndicator from 'components/LoadingIndicator'
+import { formatMinute } from 'utils/loadable'
+import { useAuth } from 'authentication'
+import { useHistory } from 'react-router-dom'
 
 export default function StartTest({ match }) {
    const { id } = match.params
-
    const [loading, setLoading] = useState(true)
    const [assessment, setAssessment] = useState(null)
+   const [starting, setStarting] = useState(false)
+   const { authUser } = useAuth()
+   const history = useHistory()
+   const [index, setIndex] = useState(0)
 
+   const startTest = () => {
+      setStarting(true)
+
+      httpClient
+         .post('functions/startAssessment', {
+            userId: authUser.objectId,
+            assessmentId: id,
+         })
+         .then(({ data }) => {
+            let result = data.result
+
+            // expectedEnd = new Date(result.startTime.iso)
+
+            // expectedEnd = new Date(
+            //    expectedEnd.getTime() + assessment.duration * 60000,
+            // )
+
+            setTimeout(() => {
+               history.push(`/session/${result.objectId}`)
+            }, 100)
+         })
+         .catch((error) => {})
+         .finally(() => {
+            setStarting(false)
+         })
+   }
    useEffect(() => {
       setLoading(true)
       httpClient
@@ -31,7 +63,17 @@ export default function StartTest({ match }) {
             <>
                <Row className="q-col-gutter-md mb-3">
                   <Col className="col-12 d-flex justify-content-end">
-                     <Button className="px-3">Start Assignment</Button>
+                     <Button className="px-3" onClick={startTest}>
+                        {!starting ? 'Start Assignment' : ''}
+                        {starting ? (
+                           <Spinner
+                              as="span"
+                              animation="border"
+                              role="status"
+                              aria-hidden="true"
+                           />
+                        ) : null}
+                     </Button>
                   </Col>
                </Row>
                <Row className="bg-light mb-3">
@@ -42,7 +84,7 @@ export default function StartTest({ match }) {
                   <Col className="col-auto d-flex align-items-center pb-3">
                      <Schedule className="me-2" />
                      {/* 1h 30m */}
-                     {assessment.duration}
+                     {formatMinute(assessment.duration)}
                   </Col>
                </Row>
                <Row className="q-col-gutter-md  mb-md-5 ">

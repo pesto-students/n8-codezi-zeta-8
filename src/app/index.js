@@ -80,7 +80,7 @@ function App() {
          <Header />
          <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/test" component={Test} />
+            <Route exact path="/session/:id" component={Test} />
             {/* <Route path="/home" component={Dashboard} /> */}
             <AuthRoute path="/signin" component={Signin} />
             <AuthRoute path="/signup" component={Signup} />

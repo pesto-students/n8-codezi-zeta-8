@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, memo } from 'react'
 import { Helmet } from 'react-helmet'
-
 import { Button, Container, Table, Col, Row } from 'react-bootstrap'
 import {
    // List,
@@ -42,6 +41,7 @@ import {
    closeAssessmentDialog,
    addUpdateAssessment,
 } from './actions'
+import { formatMinute } from 'utils/loadable'
 
 const key = 'adminHome'
 
@@ -140,7 +140,8 @@ export function CreateTest({
                               </li>
                               <li>
                                  <Schedule />
-                                 {assessment.duration} m
+
+                                 {formatMinute(assessment.duration)}
                               </li>
                               <li>
                                  <Person />
