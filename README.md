@@ -17,7 +17,7 @@
 - [Screenshots](#screenshots)
 - [Contributors](#contributors)
 
-## 🎯 About
+## About 🎯 
 
 Codezi is a unique Screen Applicants platform for Free.
 
@@ -25,19 +25,19 @@ Codezi is a unique Screen Applicants platform for Free.
 
 Frontend is hosted on Netlify.
 
-## ▶️ Demo
+## Demo ▶️ 
 
 Here you can find the demo links:
 
 - [Codezi](https://wizardly-brahmagupta-842dc6.netlify.app/)
 
-### 👮‍♂️ Test credentials
+### Test credentials 👮‍♂️ 
 
 > Email: admin@codezi.com<br/>
 > Password: Admin@123<br/>
 
 
-## :rocket: Technologies
+## 🚀 Technologies
 
 ![Node.js **v14.15.0**](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)\
 ![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\
