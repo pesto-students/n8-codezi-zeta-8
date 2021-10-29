@@ -179,7 +179,6 @@ export default function Test({ match }) {
 
             if (localQuestions[i].score) totalScore += localQuestions[i].score
 
-            // console.log(localQuestions[i].answer, answers[i])
             if (
                answers[i] &&
                localQuestions[i].answer &&

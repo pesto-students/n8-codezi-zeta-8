@@ -41,3 +41,18 @@
 - prettier  Eslint +
 - yarn run eslint --init
 - May be we can remove
+
+- Start button change placement
+- Need submit button in between
+- Instead on Thank You page we can show score and quesion and answer questions
+- Score Cal on server
+
+
+- Sample Question seeding
+10 Assessment, with 5 questions atleast
+html, CSS, Angualar
+
+- Image background image
+netlify deployment
+- CDN load image
+
