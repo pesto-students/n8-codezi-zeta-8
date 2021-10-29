@@ -179,6 +179,7 @@ export default function Test({ match }) {
 
             if (localQuestions[i].score) totalScore += localQuestions[i].score
 
+            // console.log(localQuestions[i].answer, answers[i])
             if (
                answers[i] &&
                localQuestions[i].answer &&
@@ -321,9 +322,10 @@ export default function Test({ match }) {
                            </Button>
                         </Col>
                         <Col className="col-md-6 d-flex justify-content-end">
+                           <Button className="px-3 me-3">Finish</Button>
                            <Button
                               onClick={next}
-                              className="px-3"
+                              className="px-3 ml-3"
                               disabled={selChoice == null}
                            >
                               {!submitting

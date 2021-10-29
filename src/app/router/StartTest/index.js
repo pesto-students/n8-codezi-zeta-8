@@ -61,8 +61,20 @@ export default function StartTest({ match }) {
          {loading && <LoadingIndicator />}
          {assessment && (
             <>
-               <Row className="q-col-gutter-md mb-3">
-                  <Col className="col-12 d-flex justify-content-end">
+               <Row className="q-col-gutter-md mb-3"></Row>
+               <Row className="bg-light mb-3">
+                  <Col className="col-10">
+                     <Col className="col-12 pt-3 mb-3">
+                        <strong>{assessment.title}</strong>
+                     </Col>
+                     <Col className="col-auto pb-3">{assessment.role}</Col>
+                     <Col className="col-auto d-flex align-items-center pb-3">
+                        <Schedule className="me-2" />
+                        {/* 1h 30m */}
+                        {formatMinute(assessment.duration)}
+                     </Col>
+                  </Col>
+                  <Col className="col-2 d-flex align-items-center justify-content-end">
                      <Button className="px-3" onClick={startTest}>
                         {!starting ? 'Start Assignment' : ''}
                         {starting ? (
@@ -74,17 +86,6 @@ export default function StartTest({ match }) {
                            />
                         ) : null}
                      </Button>
-                  </Col>
-               </Row>
-               <Row className="bg-light mb-3">
-                  <Col className="col-12 pt-3 mb-3">
-                     <strong>{assessment.title}</strong>
-                  </Col>
-                  <Col className="col-auto pb-3">{assessment.role}</Col>
-                  <Col className="col-auto d-flex align-items-center pb-3">
-                     <Schedule className="me-2" />
-                     {/* 1h 30m */}
-                     {formatMinute(assessment.duration)}
                   </Col>
                </Row>
                <Row className="q-col-gutter-md  mb-md-5 ">

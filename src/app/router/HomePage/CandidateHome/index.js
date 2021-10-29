@@ -9,7 +9,7 @@ import { compose } from 'redux'
 import { createStructuredSelector } from 'reselect'
 import { useInjectReducer } from 'utils/injectReducer'
 import { useInjectSaga } from 'utils/injectSaga'
-import { Search } from '@material-ui/icons'
+import { Search, NavigateNext, Code } from '@material-ui/icons'
 
 import { makeSelectLoading, makeSelectAssessments } from './selectors'
 
@@ -66,7 +66,11 @@ export function CandidateHome({
                            <div className="dashbard-card-desc">
                               {assessment.role}
                            </div>
-                           <Button>Start Assignment</Button>
+                           {/* <Button>Start Assignment</Button> */}
+                           <div className="dashboard-card-footer">
+                              <span> Start Assignment</span> <NavigateNext />
+                           </div>
+                           <Code className="bg-icon" />
                         </div>
                      </Link>
                   </Col>
