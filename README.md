@@ -1,17 +1,23 @@
+<!-- <h1 align="center">Codezi</h1>-->
 <p align="center">
         <img src="./src/logo.svg" height="80">
+        <h4 align="center">Applicants website for all your hiring.</h4><br/>
 </p>
 
-## Table of contents
-- [Introduction](#introduction)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
+<!-- ![Image of Codezi](./home.png) -->
+<p align="center">
+<img src="./home.png" align="center" height="300">
+</p>
+
+
+## 🏢 Table of contents
+- [About](#About)
+- [Demo](#Demo)
+- [Technologies](#Technologies)
 - [Screenshots](#screenshots)
 - [Contributors](#contributors)
-- [Community](#Community)
 
-## Introduction
+## 🎯 About
 
 Codezi is a unique Screen Applicants platform for Free.
 
@@ -19,7 +25,19 @@ Codezi is a unique Screen Applicants platform for Free.
 
 Frontend is hosted on Netlify.
 
-## Technologies used to build this project
+## ▶️ Demo
+
+Here you can find the demo links:
+
+- [Codezi](https://wizardly-brahmagupta-842dc6.netlify.app/)
+
+### 👮‍♂️ Test credentials
+
+> Email: admin@codezi.com<br/>
+> Password: Admin@123<br/>
+
+
+## :rocket: Technologies
 
 ![Node.js **v14.15.0**](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)\
 ![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\
@@ -27,7 +45,7 @@ Frontend is hosted on Netlify.
 ![Parse Platform and Cloud Functions](https://img.shields.io/badge/Parse--Platform--and--Cloud--Functions-0081AA?style=for-the-badge&logo=Formik&logoColor=white)\
 ![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## Setup
+## ⬇️ Setup
 
 Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
 
