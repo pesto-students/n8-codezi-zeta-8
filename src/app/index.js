@@ -88,7 +88,7 @@ function App() {
                path={`${match.url}`}
                authUser={authUser}
                location={location}
-               path="/thankyou"
+               path="/thankyou/:id"
                component={ThankYou}
             />
             <RestrictedRoute

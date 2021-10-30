@@ -57,7 +57,7 @@ export default function Test({ match }) {
                               httpClient.put(
                                  `classes/AssessmentResults/${data.objectId}`,
                                  {
-                                    status: 1,
+                                    status: 3,
                                  },
                               )
                            }
@@ -159,17 +159,10 @@ export default function Test({ match }) {
    }
 
    const completeTest = (confirm = false) => {
-      console.log(answers)
-      console.log('Submit Result')
-      console.log('Submit Result')
-
       const doSubmit = () => {
          setSubmitting(true)
 
          let localQuestions = [...questions]
-         // let localQuestions = questions.reduce((question, index) => {
-         //    return { ...question, answer: answers[index] }
-         // })
 
          let totalScore = 0,
             earnedScore = 0
@@ -179,7 +172,6 @@ export default function Test({ match }) {
 
             if (localQuestions[i].score) totalScore += localQuestions[i].score
 
-            // console.log(localQuestions[i].answer, answers[i])
             if (
                answers[i] &&
                localQuestions[i].answer &&
@@ -188,6 +180,8 @@ export default function Test({ match }) {
             ) {
                earnedScore += localQuestions[i].score
             }
+
+            localQuestions[i]['answer'] = localQuestions[i]['answer'][0] || 0
          }
 
          let score = Math.round((earnedScore * 100) / totalScore)
@@ -195,13 +189,14 @@ export default function Test({ match }) {
          httpClient
             .put(`classes/AssessmentResults/${session.objectId}`, {
                status: 1,
-               userAnswers: localQuestions,
+               result: JSON.stringify(localQuestions),
                score,
                assessment,
             })
             .finally(() => {
-               setIsDone(true)
+               // setIsDone(true)
                setSubmitting(false)
+               history.push(`/thankyou/${session.objectId}`)
             })
       }
 
@@ -227,22 +222,22 @@ export default function Test({ match }) {
       setAnswers(Object.assign({}, answers, { [index]: evt.target.value }))
    }
 
-   if (isDone) {
-      return (
-         <div className="d-flex align-items-center flex-column mb-5">
-            <img
-               src={thankyou}
-               width="300"
-               height="350"
-               className="img-fluid"
-               alt="thankyou"
-            />
-            <p className="thankyou-title">
-               We will sent and result on your email soon.
-            </p>
-         </div>
-      )
-   }
+   // if (isDone) {
+   //    return (
+   //       <div className="d-flex align-items-center flex-column mb-5">
+   //          <img
+   //             src={thankyou}
+   //             width="300"
+   //             height="350"
+   //             className="img-fluid"
+   //             alt="thankyou"
+   //          />
+   //          <p className="thankyou-title">
+   //             We will sent and result on your email soon.
+   //          </p>
+   //       </div>
+   //    )
+   // }
 
    return (
       <Container className="main">
@@ -322,7 +317,12 @@ export default function Test({ match }) {
                            </Button>
                         </Col>
                         <Col className="col-md-6 d-flex justify-content-end">
-                           <Button className="px-3 me-3">Finish</Button>
+                           <Button
+                              className="px-3 me-3"
+                              onClick={() => completeTest(true)}
+                           >
+                              Finish
+                           </Button>
                            <Button
                               onClick={next}
                               className="px-3 ml-3"

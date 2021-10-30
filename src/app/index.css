@@ -293,6 +293,10 @@ th {
    border: 3px dashed green;
    border-radius: 5px;
 }
+.test-thankyou-score-fail {
+   background-color: #d3292926;
+   border: 3px dashed rgb(126, 0, 0);
+}
 .test-thankyou-score p {
    font-size: 18px;
    margin-bottom: 0;
