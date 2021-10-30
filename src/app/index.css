@@ -205,6 +205,7 @@ a {
    background-color: #00395e21;
    padding: 15px;
    border-radius: 10px;
+   margin: 0 15px;
    /* margin-top: 50px; */
    /* padding-top: 45px; */
    width: 100%;
@@ -629,7 +630,8 @@ button.btn.btn-outlined:active {
       margin-right: 0;
    }
    .header-menu-collapse .navbar-nav {
-      margin: 25px 0;
+      /* margin: 25px 0; */
+      margin: 0;
    }
    .navbar-light .navbar-nav .nav-link.header-nav-right-btn {
       margin-left: 0;
@@ -690,6 +692,12 @@ button.btn.btn-outlined:active {
       position: absolute;
       right: 0;
       top: 0;
+   }
+   .ans-option-list li {
+      width: 100%;
+   }
+   .ans-option-list li:nth-child(even) {
+      margin-left: 0%;
    }
 }
 

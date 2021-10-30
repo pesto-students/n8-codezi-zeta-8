@@ -28,15 +28,15 @@ function Header() {
                </LinkContainer>
             </Navbar.Brand>
 
-            <Navbar.Toggle
+            {/* <Navbar.Toggle
                aria-controls="basic-navbar-nav "
                className="order-2 order-lg-1"
-            />
+            /> */}
 
             {!authUser && !isLoading && (
-               <Navbar.Collapse
+               <Navbar
                   id="basic-navbar-nav"
-                  className="order-3 order-lg-1 header-menu-collapse"
+                  className="order-3 order-lg-1 header-menu-collapse py-0"
                >
                   <Nav className="header-nav-right">
                      <LinkContainer to="/signin">
@@ -63,7 +63,7 @@ function Header() {
                         </Nav.Link>
                      </LinkContainer> */}
                   </Nav>
-               </Navbar.Collapse>
+               </Navbar>
             )}
 
             {authUser && !isLoading && (

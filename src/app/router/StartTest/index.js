@@ -63,7 +63,7 @@ export default function StartTest({ match }) {
             <>
                <Row className="q-col-gutter-md mb-3"></Row>
                <Row className="bg-light mb-3">
-                  <Col className="col-10">
+                  <Col className="col-12 col-md-9">
                      <Col className="col-12 pt-3 mb-3">
                         <strong>{assessment.title}</strong>
                      </Col>
@@ -74,7 +74,7 @@ export default function StartTest({ match }) {
                         {formatMinute(assessment.duration)}
                      </Col>
                   </Col>
-                  <Col className="col-2 d-flex align-items-center justify-content-end">
+                  <Col className="col-12 col-md-3 d-flex align-items-center justify-content-md-end col my-3">
                      <Button className="px-3" onClick={startTest}>
                         {!starting ? 'Start Assignment' : ''}
                         {starting ? (
