@@ -67,3 +67,37 @@ Parse.Cloud.define('startAssessment', async (request) => {
       return await myNewObject.save()
    }
 })
+
+Parse.Cloud.define('submitAssessment', async (request) => {
+   const sessionId = request.params.sessionId,
+      queryClass = new Parse.Query('AssessmentResults'),
+      // questionClass = new Parse.Query('Questions'),
+      result = JSON.parse(request.params.result)
+
+   let totalScore = 0,
+      earnedScore = 0
+
+   for (let i = 0; i < result.length; i++) {
+      if (result[i].score) totalScore += result[i].score
+
+      if (result[i].answer == result[i]['userAnswer']) {
+         earnedScore += result[i].score
+      }
+   }
+
+   let score = Math.round((earnedScore * 100) / totalScore)
+
+   const object = await queryClass.get(sessionId)
+
+   object.set('score', score)
+   object.set('status', 1)
+   object.set('result', request.params.result)
+   object.set('assessment', request.params.assessment)
+
+   try {
+      await object.save()
+      return true
+   } catch (error) {
+      return false
+   }
+})

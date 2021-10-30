@@ -6,7 +6,7 @@ import { Schedule } from '@material-ui/icons'
 import { httpClient } from 'utils/Api'
 import { useHistory } from 'react-router-dom'
 import LoadingIndicator from 'components/LoadingIndicator'
-import thankyou from 'thankyou.png'
+// import thankyou from 'thankyou.png'
 
 export default function Test({ match }) {
    const { id } = match.params
@@ -20,7 +20,7 @@ export default function Test({ match }) {
    const history = useHistory()
    const [selChoice, setSelChoice] = useState(null)
    const [answers, setAnswers] = useState({})
-   const [isDone, setIsDone] = useState(false)
+   // const [isDone, setIsDone] = useState(false)
    const [timerStarted, setTimerStarted] = useState(false)
 
    useEffect(() => {
@@ -164,33 +164,15 @@ export default function Test({ match }) {
 
          let localQuestions = [...questions]
 
-         let totalScore = 0,
-            earnedScore = 0
-
          for (let i = 0; i < localQuestions.length; i++) {
             localQuestions[i]['userAnswer'] = answers[i]
-
-            if (localQuestions[i].score) totalScore += localQuestions[i].score
-
-            if (
-               answers[i] &&
-               localQuestions[i].answer &&
-               localQuestions[i].answer.length &&
-               localQuestions[i].answer[0] == answers[i]
-            ) {
-               earnedScore += localQuestions[i].score
-            }
-
             localQuestions[i]['answer'] = localQuestions[i]['answer'][0] || 0
          }
 
-         let score = Math.round((earnedScore * 100) / totalScore)
-
          httpClient
-            .put(`classes/AssessmentResults/${session.objectId}`, {
-               status: 1,
+            .post(`functions/submitAssessment`, {
+               sessionId: session.objectId,
                result: JSON.stringify(localQuestions),
-               score,
                assessment,
             })
             .finally(() => {
