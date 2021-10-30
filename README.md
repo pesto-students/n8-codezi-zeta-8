@@ -4,17 +4,17 @@
         <h4 align="center">Applicants website for all your hiring.</h4><br/>
 </p>
 
-
 ## 🏢 Table of contents
-- [About](#-about)
-- [Demo](#%EF%B8%8F-demo)
-- [Technologies](#-technologies)
-- [Screenshots](#-screenshots)
-- [Contributors](#-contributors)
-- [Mentor](#-mentor)
-- [Setup](#%EF%B8%8F-setup)
 
-## 🎯 About 
+-  [About](#-about)
+-  [Demo](#%EF%B8%8F-demo)
+-  [Technologies](#-technologies)
+-  [Screenshots](#-screenshots)
+-  [Contributors](#-contributors)
+-  [Mentor](#-mentor)
+-  [Setup](#%EF%B8%8F-setup)
+
+## 🎯 About
 
 Codezi is a unique Screen Applicants platform for Free.
 
@@ -22,17 +22,16 @@ Codezi is a unique Screen Applicants platform for Free.
 
 Frontend is hosted on Netlify.
 
-## ▶️ Demo 
+## ▶️ Demo
 
 Here you can find the demo links:
 
-- [Codezi](https://wizardly-brahmagupta-842dc6.netlify.app/)
+-  [Codezi](https://wizardly-brahmagupta-842dc6.netlify.app/)
 
-### 👮‍ Test credentials 
+### 👮‍ Test credentials
 
 > Email: admin@codezi.com<br/>
 > Password: Admin@123<br/>
-
 
 ## 🚀 Technologies
 
@@ -42,14 +41,15 @@ Here you can find the demo links:
 ![Parse Platform and Cloud Functions](https://img.shields.io/badge/Parse--Platform--and--Cloud--Functions-0081AA?style=for-the-badge&logo=Formik&logoColor=white)\
 ![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## 😄 Screenshots 
+## 😄 Screenshots
+
 <!-- ![Image of Codezi](./home.png) -->
 <p>
 <img src="./home.png" align="center" height="200">
 </p>
 
-
 ## 👱 Contributors
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 <table>
@@ -58,10 +58,11 @@ Here you can find the demo links:
   </tr>  
 </table>
 
-
 ## 👨‍🏫 Mentor
 
-## ⬇️ Setup 
+-  Gaurav
+
+## ⬇️ Setup
 
 Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
 
