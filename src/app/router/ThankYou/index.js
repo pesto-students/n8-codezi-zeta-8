@@ -121,91 +121,11 @@ export default function Thankyou({ match }) {
                                           </li>
                                        ),
                                     )}
-                                    {/* <li className="right-ans">
-                                       <Form.Check
-                                          id="rdo-btn"
-                                          type="radio"
-                                          label="Hello"
-                                          className="loginas-input"
-                                          name="ans-option"
-                                          value="ans-option"
-                                       />
-                                    </li>
-                                    <li>
-                                       <Form.Check
-                                          id="rdo-btn"
-                                          type="radio"
-                                          label="Hello"
-                                          className="loginas-input"
-                                          name="ans-option"
-                                          value="ans-option"
-                                       />
-                                    </li>
-                                    <li>
-                                       <Form.Check
-                                          id="rdo-btn"
-                                          type="radio"
-                                          label="Hello"
-                                          className="loginas-input"
-                                          name="ans-option"
-                                          value="ans-option"
-                                       />
-                                    </li> */}
                                  </ul>
                               )}
                         </Col>
                      </Row>
                   ))}
-               {/* <Row className=" mb-3">
-                  <Col>
-                     <p className="d-flex align-items-center">
-                        <span className="d-inline-block me-2"> 2 Question</span>
-                        <Cancel className="text-danger" />
-                     </p>
-                     <p className="d-flex align-items-center">
-                        <strong>Hello question</strong>
-                     </p>
-
-                     <p>Desc</p>
-                  </Col>
-                  <Col className="col-auto text-right d-flex align-items-center"></Col>
-                  <Col className="col-12 mt-3">
-                     <ul className="ans-option-list radio-no-select">
-                        <li className="right-ans">
-                           <Form.Check
-                              type="radio"
-                              label="Hello"
-                              className="loginas-input"
-                              name="ans-option1"
-                           />
-                        </li>
-                        <li>
-                           <Form.Check
-                              type="radio"
-                              label="Hello"
-                              className="loginas-input"
-                              name="ans-option1"
-                           />
-                        </li>
-                        <li className="wrong-ans">
-                           <Form.Check
-                              type="radio"
-                              label="Hello"
-                              className="loginas-input"
-                              name="ans-option1"
-                           />
-                        </li>
-                        <li>
-                           <Form.Check
-                              type="radio"
-                              label="Hello"
-                              className="loginas-input"
-                              name="ans-option1"
-                           />
-                        </li>
-                     </ul>
-                  </Col>
-               </Row> */}
             </>
          )}
       </Container>
