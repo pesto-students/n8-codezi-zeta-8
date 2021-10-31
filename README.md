@@ -65,6 +65,7 @@ Here you can find the demo links:
      <td align="center"><a href="https://www.linkedin.com/in/gaurav-tiwari-b925b526/"><img src="https://media-exp1.licdn.com/dms/image/C5603AQFnvaEK2UWQCw/profile-displayphoto-shrink_400_400/0/1595056828667?e=1641427200&v=beta&t=nlIllJCCfE6TeuvW6MgTZZnoYKqbNBGFEJJf2f3yCmg" width="80px;" alt="Gaurav Tiwari"/><br /><sub><b>Gaurav Tiwari</b></sub></a><br /><a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Code">💻</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Documentation">📖</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Tests">⚠️</a></td>
   </tr>  
 </table>
+
 ## ⬇️ Setup
 
 Requires [Node.js](https://nodejs.org/) to run (v14.15.0+).
