@@ -54,7 +54,7 @@ Here you can find the demo links:
 <!-- prettier-ignore -->
 <table>
   <tr>
-     <td align="center"><a href="https://github.com/rmemon"><img src="https://avatars.githubusercontent.com/u/13727755?v=4" width="80px;" alt="Rahil Memon"/><br /><sub><b>Rahil Memon</b></sub></a><br /><a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Code">💻</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Documentation">📖</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Tests">⚠️</a></td>
+     <td align="center"><a href="https://www.linkedin.com/in/rahil-memon-22221bb1"><img src="https://avatars.githubusercontent.com/u/13727755?v=4" width="80px;" alt="Rahil Memon"/><br /><sub><b>Rahil Memon</b></sub></a><br /><a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Code">💻</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Documentation">📖</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/codezi-zeta/codezi/commits?author=codezi-zeta" title="Tests">⚠️</a></td>
   </tr>  
 </table>
 
