@@ -64,6 +64,14 @@ Parse.Cloud.define('startAssessment', async (request) => {
       myNewObject.set('status', 0)
       myNewObject.set('userRef', userPointer)
       myNewObject.set('assessmentRef', assessmentPointer)
+
+      try {
+         let assessmentClass = new Parse.Query('Assessment')
+         const object = await assessmentClass.get(assessmentId)
+         object.increment('attempted')
+         object.save()
+      } catch (error) {}
+
       return await myNewObject.save()
    }
 })
@@ -96,6 +104,15 @@ Parse.Cloud.define('submitAssessment', async (request) => {
 
    try {
       await object.save()
+
+      let { assessment } = request.params
+      if (assessment) {
+         let assessmentClass = new Parse.Query('Assessment')
+         const assessmentObj = await assessmentClass.get(assessment.objectId)
+         assessmentObj.increment('completed')
+         assessmentObj.save()
+      }
+
       return true
    } catch (error) {
       return false

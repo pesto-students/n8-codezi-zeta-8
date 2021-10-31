@@ -155,8 +155,12 @@ export function CreateTest({
                               </li>
                            </ul>
                         </td>
-                        <td className="text-center">0</td>
-                        <td className="text-center">0</td>
+                        <td className="text-center">
+                           {assessment.attempted || 0}{' '}
+                        </td>
+                        <td className="text-center">
+                           {assessment.completed || 0}{' '}
+                        </td>
                         {/* <td className="text-center">0</td> */}
                      </tr>
                   ))}
