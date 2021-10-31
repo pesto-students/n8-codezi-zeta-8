@@ -118,3 +118,21 @@ Parse.Cloud.define('submitAssessment', async (request) => {
       return false
    }
 })
+
+Parse.Cloud.afterSave('Questions', function (request) {
+   const question = request.object
+   // console.log('Assessment inside: ' + question)
+   // console.log('assessmentRef  : ' + question.get('assessmentRef'))
+   const assessmentId = question.get('assessmentRef').id //question.assessmentRef.objectId;
+   //   console.log("assessmentRef  : " + question.assessmentRef);
+   // console.log('Assessment  : ' + question.get('assessmentRef').id)
+   var queryupdate = new Parse.Query('Assessment')
+
+   queryupdate
+      .get(assessmentId)
+      .then(function (assessment) {
+         assessment.increment('questionCounts')
+         return assessment.save()
+      })
+      .catch((error) => console.log(error))
+})

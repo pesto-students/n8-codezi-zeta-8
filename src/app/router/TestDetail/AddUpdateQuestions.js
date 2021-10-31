@@ -188,7 +188,7 @@ export default function AddUpdateQuestions({
             </DialogTitle>
             <DialogContent>
                <Row>
-                  <Col md={6}>
+                  <Col md={12}>
                      <Form.Group className="mb-3" controlId="">
                         <Form.Label>Problem Name*</Form.Label>
                         <Form.Control
@@ -206,7 +206,7 @@ export default function AddUpdateQuestions({
                         )}
                      </Form.Group>
                   </Col>
-                  <Col md={6}>
+                  <Col md={12}>
                      <Form.Group className="mb-3" controlId="">
                         <Form.Label>Score*</Form.Label>
                         <Form.Control
