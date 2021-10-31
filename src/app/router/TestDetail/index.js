@@ -148,7 +148,12 @@ export default function CreateTest({ match }) {
                      md={3}
                      className="d-flex justify-content-md-end mt-3 mt-md-0"
                   >
-                     <Button onClick={setOpenQuestionDialog}>
+                     <Button
+                        onClick={() => {
+                           setActiveQuestion(null)
+                           setOpenQuestionDialog(true)
+                        }}
+                     >
                         <Add /> Add
                      </Button>
                   </Col>

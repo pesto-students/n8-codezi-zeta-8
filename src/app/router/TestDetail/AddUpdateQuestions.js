@@ -145,21 +145,21 @@ export default function AddUpdateQuestions({
    })
 
    useEffect(() => {
+      setValue('question', '')
+      setValue('score', '')
+      setValue('choice1', '')
+      setValue('choice2', '')
+      setValue('choice3', '')
+      setValue('choice4', '')
+
       if (activeQuestion) {
          setValue('question', activeQuestion.question)
          setValue('score', activeQuestion.score)
          activeQuestion.choices.forEach((choice, index) => {
             setValue(`choice${index + 1}`, choice)
          })
-      } else {
-         setValue('question', '')
-         setValue('score', '')
-         setValue('choice1', '')
-         setValue('choice2', '')
-         setValue('choice3', '')
-         setValue('choice4', '')
       }
-   }, [activeQuestion])
+   }, [activeQuestion, open])
 
    return (
       <Dialog
